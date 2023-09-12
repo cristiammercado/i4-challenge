@@ -69,7 +69,7 @@ docker compose -f mysql.yml up -d
 
 Después de unos segundos, arrancará `MySQL` con el usuario por defecto `root` y con clave `mysql-password`. Ya este contenedor de docker viene configurado para desarrollo, codificación de textos y zona horaria UTC.
 
-El anterior comando también por defecto crea una base de datos llamada `i4-challenge`. De igual manera crea un cliente basado en PHP llamado adminer con el cual puede conectarse a la base de datos. Para acceder a este cliente, abra su navegador web y vaya a la dirección `http://localhost:8088`.
+El anterior comando también por defecto crea una base de datos llamada `i4-challenge`. De igual manera crea un cliente basado en PHP llamado adminer con el cual puede conectarse a la base de datos. Para acceder a este cliente, abra su navegador web y vaya a la dirección [http://localhost:8088](http://localhost:8088).
 
  - Motor de base de datos: MySQL
  - Servidor: i4-challenge-mysql
@@ -77,7 +77,7 @@ El anterior comando también por defecto crea una base de datos llamada `i4-chal
  - Contraseña: mysql-password
  - Base de datos: i4-challenge
 
-Tenga en cuenta que las credenciales de acceso para ingresar al servidor MySQL anteriormente mencionadas son para el ambiente de desarrollo. Para ambiente de pruebas y productivo debe rescribirse las propiedades acordes a las variables de entorno usadas en el archivo ``src/main/resources/application.properties`.
+Tenga en cuenta que las credenciales de acceso para ingresar al servidor MySQL anteriormente mencionadas son para el ambiente de desarrollo. Para ambiente de pruebas y productivo debe rescribirse las propiedades acordes a las variables de entorno usadas en el archivo `src/main/resources/application.properties`.
 
 #### **EJECUCIÓN** ####
 
