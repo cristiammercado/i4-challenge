@@ -1,0 +1,37 @@
+services:
+
+  mysql:
+    container_name: i4-challenge-mysql
+    hostname: i4-challenge-mysql
+    image: mysql:latest
+    restart: unless-stopped
+    command:
+      --authentication-policy=mysql_native_password
+      --character-set-filesystem=utf8mb4
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_spanish_ci
+      --default-authentication-plugin=mysql_native_password
+      --default-time-zone="+00:00"
+      --innodb-dedicated-server=OFF
+      --long-query-time=2
+      --skip-log-bin
+      --skip-replica-start
+      --slow-query-log
+      --sql-mode="STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
+    environment:
+      MYSQL_ROOT_PASSWORD: 'mysql-password'
+      MYSQL_DATABASE: 'i4-challenge'
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - 3306:3306
+      - 33060:33060
+
+  adminer:
+    container_name: i4-challenge-adminer
+    image: adminer:latest
+    restart: unless-stopped
+    command: [ "php", "-d", "upload_max_filesize = 1G", "-d", "post_max_size = 1G", "-S", "[::]:8080", "-t", "/var/www/html" ]
+    environment:
+      ADMINER_DEFAULT_SERVER: 'i4-challenge-mysql'
+    ports:
+      - 8088:8080
