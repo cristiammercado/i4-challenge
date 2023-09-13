@@ -1,0 +1,30 @@
+{
+  "name": "I4 Digital Challenge",
+  "short_name": "I4 Digital Challenge",
+  "description": "Reto técnico para I4 Digital, Gobernación de Antioquia",
+  "dir": "ltr",
+  "lang": "es",
+  "theme_color": "#212529",
+  "background_color": "#FFFFFF",
+  "scope": "/",
+  "start_url": "/",
+  "orientation": "portrait",
+  "display": "standalone",
+  "categories": [
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable/icon-maskable.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
